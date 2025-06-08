@@ -1,0 +1,12 @@
+create database imgdb;
+
+use imgdb;
+
+create table users
+(
+    user_id int auto_increment primary key,
+    first_name char(45) not null,
+    last_name char(45) not null,
+    email char(255) not null unique,
+    password char(255) not null 
+);

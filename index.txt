@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Web Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/login_box.css">
+    <link rel="stylesheet" href="css/signup_box.css"> -->
+    <style>
+        body {
+            background: #0d0b1a;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin: 0 10px;
+        }
+
+        .hero-section {
+            position: relative;
+            padding: 80px 10%;
+            text-align: left;
+            min-height: 80vh;
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff4dd2, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .start-btn {
+            background: linear-gradient(90deg, #ff4dd2, #a855f7);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .character-image {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            max-width: 400px;
+        }
+
+        .logo-box,
+        .login-nav-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .logo-box {
+            padding: 10px 15px;
+        }
+
+        .login-nav-box {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg container mt-3 d-flex justify-content-between">
+        <div class="logo-box px-3 py-2">
+            <a class="navbar-brand text-white" href="#"><i class="fa-solid fa-gem"></i></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="home.do">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="feature.do">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="login-nav-box px-3 py-2">
+            <a href="#" id="login" class="text-white" data-bs-target="#login_modal" data-bs-toggle="modal">Login</a>
+        </div>
+    </nav>
+
+    <section id="box1" class="hero-section d-flex align-items-center justify-content-between">
+        <div>
+            <h1>YOU THINK <br> WE CREATE</h1>
+            <p>Welcome to the hub of hassle-free business setup. <br>
+                <span class="text-danger">We specialize</span> in turning your entrepreneurial <br>
+                dreams into reality with seamless solutions.
+            </p>
+            <a href="home.do" class="start-btn mt-3">START <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div>
+            <img src="images/p1.png" class="character-image" alt="Character">
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="login_modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="box2" class="login-box">
+                        <h2>Login to your <strong>Account</strong></h2>
+
+                        <form action="login.do" method="post">
+                            <div class="form-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="E mail" required>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+
+                            <a href="#" class="forgot-password">Forget password?</a>
+
+                            <button type="submit" class="login-btn">Login</button>
+
+                            <p class="signup-text">Don't have an account yet? <a href="#" data-bs-target="#signup_modal"
+                                    data-bs-toggle="modal">Sign Up</a></p>
+                        </form>
+
+                        <p
+                            style="font-size: 12px; text-align: center; color: rgba(255, 255, 255, 0.7); margin-top: 20px;">
+                            We will never share your personal information with anyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signup_modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="signup-box">
+                        <h2>Create your <strong>Account</strong></h2>
+
+                        <form action="signup.do">
+                            <div class="name-fields">
+                                <input type="text" name="first_name" placeholder="First name" required>
+                                <input type="text" name="last_name" placeholder="Last name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" name="email" placeholder="E mail" required>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" placeholder="Password" required>
+                            </div>
+
+                            <button type="submit" class="signup-btn">Sign up</button>
+                        </form>
+
+                        <p class="info-text">
+                            We will never share your personal information with anyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- signup box end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script>
+        const box1 = document.querySelector('#box1');
+        const login = document.querySelector('#login');
+
+        login.addEventListener('click', () => {
+            box1.classList.add("d-none");
+            box2.classList.add("d-flex");
+        });
+    </script> -->
+</body>
+
+</html>

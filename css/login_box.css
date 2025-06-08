@@ -1,0 +1,123 @@
+body {
+    background: #0d021f;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 380px;
+}
+
+.login-box h2 {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #a855f7, #ff4dd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.forgot-password {
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: white;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: bold;
+}
+
+.signup-text {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #ff4dd2;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side Illustration */
+.illustration {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    width: 320px;
+}
+
+.trusted-section {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trusted-section img {
+    width: 120px;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .illustration, .trusted-section {
+        display: none;
+    }
+}
